@@ -33,6 +33,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty

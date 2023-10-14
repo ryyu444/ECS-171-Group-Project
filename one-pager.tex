@@ -6,7 +6,10 @@
 \usepackage{subcaption}
 % adds a header onto every page
 \usepackage{fancyhdr}
-% adjust page margins
+% adds indent to paragraph after section header
+\usepackage{indentfirst}
+
+% make margins 1in
 \usepackage[total={6.5in,8.75in},
 top=1.25in, left=1in]{geometry}
 
@@ -26,18 +29,36 @@ top=1.25in, left=1in]{geometry}
 \fancyhf{} % clear all header and footer fields
 \lhead{ECS 171 Group Project} % left header
 \rhead{\thepage} % right header
-% \fancyhfoffset[LR]{1cm} % increase left, right margin by 1cm
+%\fancyhfoffset[LR]{1cm} % increase left, right margin by 1cm
 
 \begin{document}
     \maketitle
     
     \newpage
 
-    \section*{Introduction}
+    \section*{Problem Statement}
+    Sleep, as a student, many of us don't get enough of it. We've heard it 
+    affects our health, but in what ways? How much is enough sleep and why 
+    should we care? After analyzing our data, we can hopefully understand 
+    why this is important and improve our sleep quality. We will be able to 
+    narrow down the factors that affect our sleep, and build habits that can 
+    mitigate and reduce the negative effects sleep deprivation has on our 
+    health. Through the use of Machine Learning models, we can create 
+    predictions on what factors would lead to better or worse sleep, 
+    and predict if a person would have high or low sleep quality based 
+    on these factors. Not only will this help students like us 
+    better manage our sleep, but it will also help us as a community of 
+    diverse occupations to get a good night's rest.
 
     \section*{Dataset}
-
-    \section*{Goals}
+    The dataset being used in this project is the Sleep Health and Lifestyle dataset by Laksika Tharmalingam on Kaggle. 
+    The dataset comes in the form of a CSV file and contains 400 rows and 13 columns, encompassing various sleep and lifestyle variables. 
+    These include gender, age, occupation, sleep duration, sleep quality, physical activity, stress levels, BMI category, blood pressure, heart rate, daily steps, 
+    and sleep disorder status. We chose this dataset because, as students, we can relate to the common sleep issues many of us face. Our project focuses on investigating 
+    the relationship between sleep and health, making a dataset on sleep and health the most suitable choice. A limitation of the dataset is its synthetic nature, generated 
+    artificially rather than from real-world observations. While it may lack some real-world nuances, high-quality synthetic data can effectively train and test machine learning 
+    models in this context.
+    \section{Goals}
 
     \section*{Project Timeline}
     For our project, we plan to roughly follow the timeline below:
@@ -68,6 +89,5 @@ top=1.25in, left=1in]{geometry}
         \caption{Tasks, start and end dates, and planned duration of each task.}
         \label{tab:timeline}
     \end{table}
-
 
 \end{document}

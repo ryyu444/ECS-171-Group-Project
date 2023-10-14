@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1697308613 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697308615 0
-  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697308610 2277 e2a2b7bf29b060660859a75e14f966a4 ""
+["pdflatex"] 1697308730 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697308732 0
+  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697308728 4204 9581b3ad9a45356496bfa69191a472ff ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1696837381 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1696835702 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1696835702 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -40,12 +40,13 @@
   "c:/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty" 1696837765 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1696838639 29940 9473d58112bc8a88f5505b823a053dde ""
   "c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1696838803 678 4792914a8f45be57bb98413425e4c7af ""
+  "c:/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty" 1696842963 1618 7b2cc9bc42f1ad36c989fb47fd65c549 ""
   "c:/texlive/2023/texmf-dist/web2c/texmf.cnf" 1696833706 40967 d940221f8762fd5848760382d97d1226 ""
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696843946 4733391 2ebc060b8add16e6f53b15794d3dc16e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1696844076 8183499 e0621ca742910fc6c994aea7a217706a ""
   "c:/texlive/2023/texmf.cnf" 1696843924 713 e69b156964470283e0530f5060668171 ""
-  "one-pager.aux" 1697308615 298 ba30b4d46c1092a0e6f7ed7fbc1f4e78 "pdflatex"
-  "one-pager.tex" 1697308610 2277 e2a2b7bf29b060660859a75e14f966a4 ""
+  "one-pager.aux" 1697308732 391 9e8183417485d03e40efd553d9a61b14 "pdflatex"
+  "one-pager.tex" 1697308728 4204 9581b3ad9a45356496bfa69191a472ff ""
   (generated)
   "one-pager.aux"
   "one-pager.log"
