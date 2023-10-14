@@ -153,11 +153,11 @@ dmypy.json
 cython_debug/
 
 # LaTex
-.aux
-.fdb_latexmk
-.fls
-.log
-.synctext.gz
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctext.gz
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
