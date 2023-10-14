@@ -19,11 +19,24 @@ top=1.25in, left=1in]{geometry}
 
 % Resize table rows
 \renewcommand{\arraystretch}{1.75}
+% Redefine title page
+\renewcommand{\maketitle}{
+    \begin{titlepage}
+        % Set up title page
+        \centering
+        \huge{\textbf{ECS 171 Group 10 Project}} \par
+        \vspace{.5cm}
+        % group leader
+        \large{Leader: Calvin Chen} \par
+        \vspace{.5cm}
+        % group members
+        \normalfont{Amira Basyouni, Alexis Lydon, Calvin Chen, Ryan Yu, Tianming Tan} \par
+        \vspace{.5cm}
+        % date
+        \today
+    \end{titlepage}
+}
 
-% Set up title page
-\title{ECS 171 Group Project}
-\author{Amira Basyouni, Alexis Lydon, Calvin Chen, Ryan Yu, Tianming Tan}
-\date{\today}
 
 % set up header
 \fancyhf{} % clear all header and footer fields
@@ -67,7 +80,7 @@ top=1.25in, left=1in]{geometry}
         \centering
         \begin{tabular}{l|c|c|c}
             \hline \hline
-            \multicolumn{4}{c}{\textbf{Project Timeline}} \\
+            \multicolumn{4}{c}{\textbf{Project Timeline}} \\ % combine n columns into one
             \hline \hline
             \multicolumn{1}{c|}{\textbf{Task}} & \textbf{Start Date} & \textbf{End Date} & \textbf{Duration (days)} \\
             \hline

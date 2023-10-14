@@ -1,11 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1697309164 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697309166 0
-  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697309162 4206 2af97eb93523046e54b460d83eaeca47 ""
+["pdflatex"] 1697310582 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697310586 0
+  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697310580 4579 a1fe0231cf12c782acef49308398ad0c ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1696837381 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1696835702 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1696835702 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1696835702 1528 abec98dbc43e172678c11b3b9031252a ""
-  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1696835702 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1696835702 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1696835702 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1696835702 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
@@ -20,7 +19,6 @@
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1696834025 32080 340ef9bf63678554ee606688e7b5339d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1696834025 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1696834025 32722 d7379af29a190c3f453aba36302ff5a9 ""
-  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1696834025 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
   "c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1696839824 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty" 1696838224 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
   "c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty" 1696838224 1057 525c2192b5febbd8c1f662c9468335bb ""
@@ -45,8 +43,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696843946 4733391 2ebc060b8add16e6f53b15794d3dc16e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1696844076 8183499 e0621ca742910fc6c994aea7a217706a ""
   "c:/texlive/2023/texmf.cnf" 1696843924 713 e69b156964470283e0530f5060668171 ""
-  "one-pager.aux" 1697309165 377 4c7824a742ca7dfc948a63a53ddf97f7 "pdflatex"
-  "one-pager.tex" 1697309162 4206 2af97eb93523046e54b460d83eaeca47 ""
+  "one-pager.aux" 1697310585 377 3115987a4ffd2e0456c9b1c4f5c7e79f "pdflatex"
+  "one-pager.tex" 1697310580 4579 a1fe0231cf12c782acef49308398ad0c ""
   (generated)
   "one-pager.aux"
   "one-pager.log"
