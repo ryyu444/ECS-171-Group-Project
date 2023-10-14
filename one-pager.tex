@@ -8,10 +8,11 @@
 \usepackage{fancyhdr}
 % adds indent to paragraph after section header
 \usepackage{indentfirst}
-
 % make margins 1in
 \usepackage[total={6.5in,8.75in},
 top=1.25in, left=1in]{geometry}
+% add hyperlinks
+\usepackage{hyperref}
 
 % set up page style & graphic path
 \pagestyle{fancy}
@@ -19,7 +20,8 @@ top=1.25in, left=1in]{geometry}
 
 % Resize table rows
 \renewcommand{\arraystretch}{1.75}
-% Redefine title page
+
+% Set up title page
 \renewcommand{\maketitle}{
     \begin{titlepage}
         % Set up title page
@@ -36,7 +38,6 @@ top=1.25in, left=1in]{geometry}
         \today
     \end{titlepage}
 }
-
 
 % set up header
 \fancyhf{} % clear all header and footer fields
@@ -70,18 +71,27 @@ top=1.25in, left=1in]{geometry}
     and sleep disorder status. We chose this dataset because, as students, we can relate to the common sleep issues many of us face. Our project focuses on investigating 
     the relationship between sleep and health, making a dataset on sleep and health the most suitable choice. A limitation of the dataset is its synthetic nature, generated 
     artificially rather than from real-world observations. While it may lack some real-world nuances, high-quality synthetic data can effectively train and test machine learning 
-    models in this context. Here is the link of our dataset for further reference: https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data
+    models in this context. Here is the link of our dataset for further reference: \href{https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset/data}{Sleep Health and Lifestyle Dataset}
     
     \section*{Goals}
+    In this machine learning project centered on the intersection of sleep health and stress, we aim to achieve several key objectives to better understand and predict the dynamics 
+    between these two factors. First, we will dive into the relationship between sleep duration and stress. Our investigation will involve analyzing how varying durations of sleep 
+    impacts an individual's stress levels. Next, we will explore the influence of sleep quality on stress levels. As an integral part of the project, we will develop an accurate 
+    regression model for stress prediction based on factors of sleep quality. Another aspect of our project involves investigating the minimum adequate sleep duration required 
+    for stress reduction. Lastly, we will also examine the relationship between various sleep patterns including duration and quality, and an individual's blood pressure. These 
+    defined project goals as a structured guide throughout our research, data collection, analysis, and model development. They will enable us to gain valuable insights into the 
+    complex relationship between sleep health and stress levels while delivering solutions and predictions for this area of health.
+
+    \newpage
 
     \section*{Project Timeline}
     For our project, we plan to roughly follow the timeline below:
 
-    \begin{table}[h]
+    \begin{table}[htbp]
         \centering
         \begin{tabular}{l|c|c|c}
             \hline \hline
-            \multicolumn{4}{c}{\textbf{Project Timeline}} \\ % combine n columns into one
+            \multicolumn{4}{c}{\textbf{Project Timeline}} \\ % resizes n columns into one
             \hline \hline
             \multicolumn{1}{c|}{\textbf{Task}} & \textbf{Start Date} & \textbf{End Date} & \textbf{Duration (days)} \\
             \hline
@@ -103,5 +113,16 @@ top=1.25in, left=1in]{geometry}
         \caption{Tasks, Start and End Dates, and Planned Duration}
         \label{tab:timeline}
     \end{table}
+
+    \textbf{\underline{Task Breakdown}}
+    \begin{enumerate}
+        \item Background/Literature Review: Research our problem and describe it scientifically
+        \item Exploratory Data Analysis: Understanding our dataset and filtering out noise
+        \item Developing prediction models: Creating 3+ models to quantify and predict desired outcomes
+        \item Evaluation of the model and testing performance: Testing our models and deciding on the best performing one
+        \item Developing front-end to display and run models: Invoke our models and display results
+        \item Finish Report and Minor Adjustments: Clean up our code and final report paper
+        \item Presentation Practice: Practice our presentation and prepare for questions
+    \end{enumerate}
 
 \end{document}
