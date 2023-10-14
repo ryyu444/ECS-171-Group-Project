@@ -6,10 +6,16 @@
 \usepackage{subcaption}
 % adds a header onto every page
 \usepackage{fancyhdr}
+% adjust page margins
+\usepackage[total={6.5in,8.75in},
+top=1.25in, left=1in]{geometry}
 
 % set up page style & graphic path
 \pagestyle{fancy}
 \graphicspath{{./images/}}
+
+% Resize table rows
+\renewcommand{\arraystretch}{1.75}
 
 % Set up title page
 \title{ECS 171 Group Project}
@@ -20,18 +26,48 @@
 \fancyhf{} % clear all header and footer fields
 \lhead{ECS 171 Group Project} % left header
 \rhead{\thepage} % right header
-\fancyhfoffset[LR]{1cm} % increase left, right margin by 1cm
+% \fancyhfoffset[LR]{1cm} % increase left, right margin by 1cm
 
 \begin{document}
     \maketitle
+    
     \newpage
 
-    \section{Introduction}
+    \section*{Introduction}
 
-    \section{Dataset}
+    \section*{Dataset}
 
-    \section{Goals}
+    \section*{Goals}
 
-    \section{Project Timeline}
+    \section*{Project Timeline}
+    For our project, we plan to roughly follow the timeline below:
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|c|c|c|}
+            \hline
+            \multicolumn{4}{|c|}{\textbf{Project Timeline}} \\
+            \hline
+            \multicolumn{1}{|c|}{\textbf{Task}} & \textbf{Start Date} & \textbf{End Date} & \textbf{Duration (days)} \\
+            \hline
+            Background/Literature Review & Oct. 16 & Oct 22. & 7 \\
+            \hline
+            Exploratory Data Analysis & Oct 23. & Oct 29. & 7 \\
+            \hline
+            Developing prediction models & Oct 30. & Nov. 5-8 & 7-10 \\
+            \hline
+            Evaluation of the model and testing performance & Nov. 6-9 & Nov. 12-14 & 7-9 \\
+            \hline
+            Developing front-end to display and run models & Nov. 13-15 & Nov. 19-21 & 7 \\
+            \hline
+            Finish Report and Minor Adjustments & Nov. 20-22 & Nov. 23-25 & 4 \\
+            \hline
+            Presentation Practice & Nov. 24-26 & Nov. 28-30 & 5 \\
+            \hline
+        \end{tabular}
+        \caption{Tasks, start and end dates, and planned duration of each task.}
+        \label{tab:timeline}
+    \end{table}
+
 
 \end{document}
