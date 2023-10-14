@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1697308730 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697308732 0
-  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697308728 4204 9581b3ad9a45356496bfa69191a472ff ""
+["pdflatex"] 1697309164 "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" "one-pager.pdf" "one-pager" 1697309166 0
+  "c:/Users/ryyu4/OneDrive/Desktop/UC Davis Courses/Junior (2023-2024)/ECS 171/ECS-171-Group-Project/one-pager.tex" 1697309162 4206 2af97eb93523046e54b460d83eaeca47 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1696837381 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1696835702 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1696835702 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -45,8 +45,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696843946 4733391 2ebc060b8add16e6f53b15794d3dc16e ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1696844076 8183499 e0621ca742910fc6c994aea7a217706a ""
   "c:/texlive/2023/texmf.cnf" 1696843924 713 e69b156964470283e0530f5060668171 ""
-  "one-pager.aux" 1697308732 391 9e8183417485d03e40efd553d9a61b14 "pdflatex"
-  "one-pager.tex" 1697308728 4204 9581b3ad9a45356496bfa69191a472ff ""
+  "one-pager.aux" 1697309165 377 4c7824a742ca7dfc948a63a53ddf97f7 "pdflatex"
+  "one-pager.tex" 1697309162 4206 2af97eb93523046e54b460d83eaeca47 ""
   (generated)
   "one-pager.aux"
   "one-pager.log"
