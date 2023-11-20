@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Predicting Sleep</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css')}}">
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Stress Level Prediction</h1>
+            <p>Enter a single digit between 1 and 9 for each feature!</p>
+            <form action="{{ url_for('predict')}}" method="post">
+                <div class="input-form">
+                    <input class="form-item" type="text" name="Sleep_Duration" placeholder="Sleep Duration" required="required"/>
+                    <input class="form-item" type="text" name="Sleep_Quality" placeholder="Sleep Quality" required="required"/>
+                    <button class="form-item" type="submit">Predict!</button>
+                </div>            
+            </form>
+            <h3>Logistic Regression Model Prediction:</h3>
+            <p class="prediction-text">{{ logreg_prediction_text }}</p>
+            <h3>Naive Bayes Classifier Model Prediction:</h3>
+            <p class="prediction-text">{{ gnb_prediction_text }}</p>
+            <h3>Support Vector Machine Model Prediction:</h3>
+            <p class="prediction-text">{{ svm_prediction_text }}</p>
+        </div>    
+        
+
+        
+    </body>
+</html>
