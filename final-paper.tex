@@ -67,15 +67,15 @@ top=1.25in, left=1in]{geometry}
     \section*{Literature Review}
     \noindent Machine Learning has great capabilities within the realm of pattern recognition and categorization; two fields that we hope to utilize as we explore the connection between sleep and stress. It is important to address some of the pre-existing studies which were conducted with a similar objective. Presented below are examples of such research and methodologies as well as their overall findings.\\
     
-    \noindent Jayawickrama and Rupasingha, researchers from Sabaragamuwa University of Sri Lanka, conducted a study to examine the impact of sleep habits on stress levels. (2) They applied various machine learning models which included Naïve Bayes, Random Forest, Decision Trees, Multi-layer Perceptrons (MLPs), Support Vector Machines (SVMs), and Logistic Regression mixed with cross-validation. It was revealed that five of the six models achieved accuracy rates exceeding 80\%, suggesting that there is a strong correlation between sleep and stress. Notably, Naïve Bayes was the best predictor with an accuracy of 91.27\%.\\ 
+    \noindent Jayawickrama and Rupasingha, researchers from Sabaragamuwa University of Sri Lanka, conducted a study to examine the impact of sleep habits on stress levels.\cite{bib:2} They applied various machine learning models which included Naïve Bayes, Random Forest, Decision Trees, Multi-layer Perceptrons (MLPs), Support Vector Machines (SVMs), and Logistic Regression mixed with cross-validation. It was revealed that five of the six models achieved accuracy rates exceeding 80\%, suggesting that there is a strong correlation between sleep and stress. Notably, Naïve Bayes was the best predictor with an accuracy of 91.27\%.\\ 
     
-    \noindent Minhazur Rahman and a different group of researchers predicted stress levels using data collected from sleeping participants.  Some of the models they utilized include Gradient Boosting, Decision Trees, Random Forest, Gaussian Naive Bayes, and Linear Support Vector Machine. Their models achieved an accuracy rate of over 95\%, with Naive Bayes and SVM as the top performers.\\
+    \noindent Minhazur Rahman and a different group of researchers predicted stress levels using data collected from sleeping participants.\cite{bib:1} Some of the models they utilized include Gradient Boosting, Decision Trees, Random Forest, Gaussian Naive Bayes, and Linear Support Vector Machine. Their models achieved an accuracy rate of over 95\%, with Naive Bayes and SVM as the top performers.\\
     
     \noindent Overall, these studies highlight the efficacy of machine learning models in predicting stress levels based on sleep data, with Naive Bayes and SVM demonstrating high performance. We hope to utilize these research metrics as the basis of judgment for the models that we will be building and testing.
 
 
     \section*{Dataset Description and Exploratory Data Analysis}
-    \noindent The dataset being used in this project is titled “Sleep Health and Lifestyle Dataset” and was made by Laksika Tharmalingam, accessible on Kaggle. The dataset comes in the form of a CSV file and contains 400 rows and 13 columns, consisting of various sleep and lifestyle variables (e.g. gender, age, occupation, sleep duration, sleep quality, and stress levels). These variables encompass the very aspects of sleep and health that can be useful in predicting stress. Despite the abundant source of data, a limitation of this dataset is its synthetic nature, generated artificially rather than from real-world observations. Although it may lack certain real-world nuances, high-quality synthetic data proves effective in emulating real datasets. It serves as a cost-efficient and time-saving approach in comparison to gathering real-world observations to use for training and testing machine learning models.\\
+    \noindent The dataset being used in this project is titled “Sleep Health and Lifestyle Dataset”\cite{bib:3} and was made by Laksika Tharmalingam, accessible on Kaggle. The dataset comes in the form of a CSV file and contains 400 rows and 13 columns, consisting of various sleep and lifestyle variables (e.g. gender, age, occupation, sleep duration, sleep quality, and stress levels). These variables encompass the very aspects of sleep and health that can be useful in predicting stress. Despite the abundant source of data, a limitation of this dataset is its synthetic nature, generated artificially rather than from real-world observations. Although it may lack certain real-world nuances, high-quality synthetic data proves effective in emulating real datasets. It serves as a cost-efficient and time-saving approach in comparison to gathering real-world observations to use for training and testing machine learning models.\\
     
     \noindent Initially, we conducted essential data preprocessing to convert all categorical data into numerical values, enhancing their compatibility with prediction models. This involved applying label encoding to categorical attributes from the dataset like BMI and Gender. We opted for label encoding over one-hot encoding to both maintain consistency in the number of columns in our dataset and to enhance clarity in visualizing a pair plot and correlation matrix.\\
     
@@ -217,14 +217,11 @@ top=1.25in, left=1in]{geometry}
 
     \newpage
     \begin{thebibliography}{9}
-        [1] M. M. Rahman, A. Mohaimenul Islam, J. Miah, S. Ahmad, and M. Mamun, “Sleepwell:stress level prediction through sleep data. are you stressed?,” 2023 IEEE World AI IoT Congress (AIIoT), 2023. doi:10.1109/aiiot58121.2023.10174306.\\\\
-        \label{bib:1}
+        \bibitem{bib:1} M. M. Rahman, A. Mohaimenul Islam, J. Miah, S. Ahmad, and M. Mamun, “Sleepwell:stress level prediction through sleep data. are you stressed?,” 2023 IEEE World AI IoT Congress (AIIoT), 2023. doi:10.1109/aiiot58121.2023.10174306.\\\\
 
-        [2] S. Jayawickrama and S. Rupasingha, “Predicting stress levels using sleep data,” 2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE), 2019. doi:10.1109/bibe.2019.000-9.\\\\
-        \label{bib:2}
+        \bibitem{bib:2} S. Jayawickrama and S. Rupasingha, “Predicting stress levels using sleep data,” 2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE), 2019. doi:10.1109/bibe.2019.000-9.\\\\
 
-        [3] L. Tharmalingam, “Sleep Health and Lifestyle Dataset,” Kaggle, 2021. [Online]. Available: https://www.kaggle.com/lahiripremarathne/sleep-health-and-lifestyle-dataset. [Accessed: 10-Jun-2021].\\
-        \label{bib:3}
+        \bibitem{bib:3} L. Tharmalingam, “Sleep Health and Lifestyle Dataset,” Kaggle, 2021. [Online]. Available: https://www.kaggle.com/lahiripremarathne/sleep-health-and-lifestyle-dataset. [Accessed: 10-Jun-2021].\\
 
     \end{thebibliography}
 
