@@ -28,7 +28,11 @@ top=1.25in, left=1in]{geometry}
     \begin{titlepage}
         % Set up title page
         \centering
-        \huge{\textbf{ECS 171 Group 10 Project}} \par
+        \huge{\textbf{The Effects of Sleep on Stress}} \par
+        \vspace{.5cm}
+        \large{\textbf{ECS 171 Machine Learning}} \par
+        \vspace{.5cm}
+        \large{\textbf{Group 10 Project Report}} \par
         \vspace{.5cm}
         % group leader
         \large{Leader: Ryan Yu} \par
@@ -63,9 +67,9 @@ top=1.25in, left=1in]{geometry}
     \section*{Literature Review}
     \noindent Machine Learning has great capabilities within the realm of pattern recognition and categorization; two fields that we hope to utilize as we explore the connection between sleep and stress. It is important to address some of the pre-existing studies which were conducted with a similar objective. Presented below are examples of such research and methodologies as well as their overall findings.\\
     
-    \noindent Jayawickrama and Rupasingha, researchers from Sabaragamuwa University of Sri Lanka, conducted a study to examine the impact of sleep habits on stress levels.(2) They applied various machine learning models which included Naïve Bayes, Random Forest, Decision Trees, Multi-layer Perceptrons (MLPs), Support Vector Machines (SVMs), and Logistic Regression mixed with cross-validation. It was revealed that five of the six models achieved accuracy rates exceeding 80\%, suggesting that there is a strong correlation between sleep and stress. Notably, Naïve Bayes was the best predictor with an accuracy of 91.27\%.\\ 
+    \noindent Jayawickrama and Rupasingha, researchers from Sabaragamuwa University of Sri Lanka, conducted a study to examine the impact of sleep habits on stress levels. (2) They applied various machine learning models which included Naïve Bayes, Random Forest, Decision Trees, Multi-layer Perceptrons (MLPs), Support Vector Machines (SVMs), and Logistic Regression mixed with cross-validation. It was revealed that five of the six models achieved accuracy rates exceeding 80\%, suggesting that there is a strong correlation between sleep and stress. Notably, Naïve Bayes was the best predictor with an accuracy of 91.27\%.\\ 
     
-    \noindent Minhazur Rahman and a different group of researchers predicted stress levels using data collected from sleeping participants.(1) Some of the models they utilized include Gradient Boosting, Decision Trees, Random Forest, Gaussian Naive Bayes, and Linear Support Vector Machine. Their models achieved an accuracy rate of over 95\%, with Naive Bayes and SVM as the top performers.\\
+    \noindent Minhazur Rahman and a different group of researchers predicted stress levels using data collected from sleeping participants.  Some of the models they utilized include Gradient Boosting, Decision Trees, Random Forest, Gaussian Naive Bayes, and Linear Support Vector Machine. Their models achieved an accuracy rate of over 95\%, with Naive Bayes and SVM as the top performers.\\
     
     \noindent Overall, these studies highlight the efficacy of machine learning models in predicting stress levels based on sleep data, with Naive Bayes and SVM demonstrating high performance. We hope to utilize these research metrics as the basis of judgment for the models that we will be building and testing.
 
@@ -75,20 +79,20 @@ top=1.25in, left=1in]{geometry}
     
     \noindent Initially, we conducted essential data preprocessing to convert all categorical data into numerical values, enhancing their compatibility with prediction models. This involved applying label encoding to categorical attributes from the dataset like BMI and Gender. We opted for label encoding over one-hot encoding to both maintain consistency in the number of columns in our dataset and to enhance clarity in visualizing a pair plot and correlation matrix.\\
     
-    \noindent Following data preprocessing, we generated a pair plot matrix (reference to figure) to investigate any potential linearly separable relationships between the attributes and Stress Level. The pair plot revealed notable linear associations, particularly between Sleep Quality and both Sleep Duration and Age in predicting Stress Level. Additionally, Sleep Duration and Gender also have somewhat of a linear relationship in predicting stress.\\
+    \noindent Following data preprocessing, we generated a pair plot matrix \ref{fig:pairplot} to investigate any potential linearly separable relationships between the attributes and Stress Level. The pair plot revealed notable linear associations, particularly between Sleep Quality and both Sleep Duration and Age in predicting Stress Level. Additionally, Sleep Duration and Gender also have somewhat of a linear relationship in predicting stress.\\
     
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{pairplot.png}
+        \includegraphics[width=0.40\textwidth]{pairplot.png}
         \caption{Pair Plot Matrix}
         \label{fig:pairplot}
     \end{figure}
 
-    \noindent Subsequently, a correlation matrix (reference to figure) was constructed to examine high correlations among attributes, with a special focus on their connection to Stress Level as the dependent variable in our models. The correlation matrix reinforced the findings from the pair plot, highlighting strong negative correlations of -0.9 between Sleep Quality and Stress Level, and -0.81 between Stress Level and Sleep Duration.
+    \noindent Subsequently, a correlation matrix \ref{fig:correlation} was constructed to examine high correlations among attributes, with a special focus on their connection to Stress Level as the dependent variable in our models. The correlation matrix reinforced the findings from the pair plot, highlighting strong negative correlations of -0.9 between Sleep Quality and Stress Level, and -0.81 between Stress Level and Sleep Duration.
     
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{correlation.png}
+        \includegraphics[width=0.60\textwidth]{correlation.png}
         \caption{Correlation Matrix}
         \label{fig:correlation}
     \end{figure}
@@ -98,7 +102,7 @@ top=1.25in, left=1in]{geometry}
     \noindent We also performed some outlier detection on these important variables using box plot models. We found no significant outliers neither in the predictor variables nor in the dependent variable Stress Level. Although Stress Level could be a value from 1 to 10, the only outcome values available from this dataset were between 3 and 8.\\
     
     \section*{Proposed Methodology}
-    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots (reference to figure), certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data.\\
+    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots \ref{fig:pairplot}, certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data.\\
 
     \noindent Managing the numerous levels of our outcome variable, Stress Level, made it difficult to discern a clear distinction between our labels. To simplify the problem, we contemplated grouping levels (e.g. combining 3 and 4, 5 and 6, 7 and 8 to create three stress levels instead of six). However, we ultimately decided against grouping to avoid potential oversimplification and instead retained the original range of 3-8.\\
 
@@ -112,29 +116,28 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{lr-classification-report.png}
-        \caption{Classification Report of Linear Regression}
+        \includegraphics[width=0.75\textwidth]{lr-report.png}
+        \caption{MSE and R$^2$ Results for Linear Regression}
         \label{fig:class-report-lr}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{linear-regression-scatterplot.png}
+        \includegraphics[width=0.70\textwidth]{lr-scatterplot.png}
         \caption{Scatterplot of Linear Regression}
         \label{fig:scatterplot-lr}
     \end{figure}
 
-    \noindent The model showed decent training performance but struggled to generalize to the test data, indicating potential overfitting. Further analysis and alternative modeling approaches may be needed for improvement.\\
+    \noindent The Linear Regression model underwent 15-fold cross-validation, with MSE and  R{$^2$} as performance metrics. In training, MSE averaged 0.5977, indicating a 0.598-unit deviation between predictions and actual values. R${^2}$ values ranged from 0.6207 to 0.9364, averaging 0.7909, signifying 79.1\% variance explanation. Test data MSE averaged 0.7041, slightly exceeding training data, suggesting potential overfitting. Test data R${^2}$ ranged from -6.5406 to 0.9775, averaging -0.0226, indicating limited explanatory power. 
+    \noindent In summary, the model showed decent training performance but struggled to generalize, suggesting potential overfitting and necessitating further analysis and alternative approaches for improvement.
     
-    \noindent In the training data, MSE values varied between 0.2509 and 0.9157, averaging at 0.5977. This implies an average deviation of approximately 0.598 units between the model's predictions and the actual values. The $R^2$ values for the training data ranged from 0.6207 to 0.9364, with an average of 0.7909. This indicated that the model accounts for about 79.1\% of the variance in the target variable. Shifting to the test data, MSE values ranged from 0.0503 to 1.8097, averaging at 0.7041. This slightly exceeds the training data average, suggesting potential overfitting. The $R^2$ values for the test data spanned from -6.5406 to 0.9775, with an average of -0.0226, highlighting the limited explanatory power of the model for the test data.\\
-    
-    \noindent In summary, the model showed decent training performance but struggled to generalize to the test data, indicating potential overfitting. Further analysis and alternative modeling approaches may be needed for improvement.
-
     \noindent\subsection*{Multinomial Logistic Regression:}
     
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.60\textwidth]{mlr-classification-report.png}
+        \subfloat[\centering Training Report]{{\includegraphics[width=7.5cm]{mlr-class-report-train.png} }}
+        \qquad
+        \subfloat[\centering Testing Report]{{\includegraphics[width=7.5cm]{mlr-class-report-test.png} }}
         \caption{Classification Report of Multinomial Logistic Regression}
         \label{fig:class-report-mlr}
     \end{figure}
@@ -154,16 +157,18 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{correlation.png}
-        \caption{Correlation Matrix}
-        \label{fig:correlation}
+        \subfloat[\centering Training Report]{{\includegraphics[width=7.5cm]{nb-class-report-train.png} }}
+        \qquad
+        \subfloat[\centering Testing Report]{{\includegraphics[width=7.5cm]{nb-class-report-test.png} }}
+        \caption{Classification Report of Naive Bayes}
+        \label{fig:class-report-nb}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{correlation.png}
-        \caption{Correlation Matrix}
-        \label{fig:correlation}
+        \includegraphics[width=0.75\textwidth]{nb-confusion-matrix.png}
+        \caption{Confusion Matrix of Naive Bayes}
+        \label{fig:confusion-matrix-nb}
     \end{figure}
 
     \noindent The Naive Bayes model, built using sklearn’s GaussianNB function demonstrated mixed performance across classes in training and test datasets. From the classification report, classes 3 and 8 have high precision, recall, and f1-score that is all above 0.9 in both sets. This indicates strong and precise classification of these classes. However, classes 4 and 5 showed a lower precision, with class 4 also having low recall, indicating inaccurate classification for these classes.\\
@@ -174,9 +179,11 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.60\textwidth]{svm-classification-report.png}
+        \subfloat[\centering Training Report]{{\includegraphics[width=7.5cm]{svm-class-report-train.png} }}
+        \qquad
+        \subfloat[\centering Testing Report]{{\includegraphics[width=7.5cm]{svm-class-report-test.png} }}
         \caption{Classification Report of Linear Support Vector Machine}
-        \label{fig:class-report-svm}
+        \label{fig:example}
     \end{figure}
 
     \begin{figure}[H]
@@ -193,6 +200,8 @@ top=1.25in, left=1in]{geometry}
     \noindent In summary, the SVM model displayed commendable performance in classifying the dataset, with elevated precision, recall, and F1-scores across most classes. There is still room for improvement in the model's performance for class 4. Despite that, the model's consistent accuracy on both the training and test sets suggests its effectiveness and ability to generalize well to unseen data.
 
     \noindent\subsection*{Software Implementation:}
+    
+    \noindent For software implementation, we utilized Next.js and Flask to construct our web page for testing and running our model. The component receives two inputs, namely sleep quality and sleep duration. It subsequently initiates a POST request to the '/api/predict' API endpoint with these inputs. The API then employs four distinct machine learning models (i.e. Linear Regression, Multinomial Logistic Regression, Naive Bayes, and Linear Support Vector Machine) to make predictions. These models, having been pre-trained, are loaded from a pickle file. Following the prediction process, the results are returned to the front end as a JSON response and displayed.
 
     \begin{figure}[H]
         \centering
@@ -201,21 +210,21 @@ top=1.25in, left=1in]{geometry}
         \label{fig:frontend}
     \end{figure}
 
-    \noindent For software implementation, we utilized Next.js and Flask to construct our web page for testing and running our model. The component receives two inputs, namely sleep quality and sleep duration. It subsequently initiates a POST request to the '/api/predict' API endpoint with these inputs. The API then employs four distinct machine learning models (i.e. Linear Regression, Multinomial Logistic Regression, Naive Bayes, and Linear Support Vector Machine) to make predictions. These models, having been pre-trained, are loaded from a pickle file. Following the prediction process, the results are returned to the front end as a JSON response and displayed.
-
     \section*{Conclusion and Discussion}
-    \noindent Through the use of “Sleep Health and Lifestyle Dataset” that contains various sleep and lifestyle variables, and the use of four different models (i.e. Linear Regression, Logistic Regression, Naive Bayes, and Support Vector Machine), we were able to form multiple models that predict Stress Level. Despite our initial hopes for a strong predictive Linear Regression model, the high MSE and R2 values brought it out of the race. On the other hand, our Multinomial Logistic Regression, Naive Bayes, and SVM models were able to achieve over 80\% accuracy. In terms of stress levels, these three were strongest at predicting levels 3, 6, 7, and 8, but performed much poorer with the remaining values. Overall, our best predictive models consist of Multinomial Logistic Regression and SVM, which corroborates with what prior research found in our literature review. In stark contrast, however, we found that Naive Bayes was the worst out of the three contenders in comparison to external studies that concluded with Naive Bayes having the best predictive capabilities amongst all of their models. This can be attributed to many factors (e.g. our way of categorization, training and testing, etc).\\
+    \noindent Using the "Sleep Health and Lifestyle Dataset" and four models (Linear Regression, Logistic Regression, Naive Bayes, and Support Vector Machine), we formed models predicting Stress Level. While Linear Regression fell short, Multinomial Logistic Regression, Naive Bayes, and SVM achieved over 80\% accuracy, particularly excelling at predicting levels 3, 6, 7, and 8. Notably, Multinomial Logistic Regression and SVM emerged as the best predictive models, aligning with prior research. In stark contrast, however, we found that Naive Bayes was the worst out of the three contenders in comparison to external studies that concluded with Naive Bayes having the best predictive capabilities amongst all of their models. This can be attributed to many factors (e.g. our way of categorization, training and testing, etc).\\
     
     \noindent For the future of stress prediction with machine learning, it is recommended that more robust models, along with a larger training set (possibly from real data), are used for practicality and to get less ambiguous trends. Furthermore, creating and testing other types of models, such as Decision Trees or Multilayer Perceptrons (MLPs), may yield slightly more accurate predictions than the models developed in this project. Regardless of what the future might bring, we take pride in what we’ve accomplished over the span of 10 weeks, transitioning from a collection of ideas to creating predictive models with accuracies exceeding 80\%, and ultimately developing a fully functioning frontend to display their capabilities.
 
     \newpage
-    \section*{References}
     \begin{thebibliography}{9}
         [1] M. M. Rahman, A. Mohaimenul Islam, J. Miah, S. Ahmad, and M. Mamun, “Sleepwell:stress level prediction through sleep data. are you stressed?,” 2023 IEEE World AI IoT Congress (AIIoT), 2023. doi:10.1109/aiiot58121.2023.10174306.\\\\
+        \label{bib:1}
 
         [2] S. Jayawickrama and S. Rupasingha, “Predicting stress levels using sleep data,” 2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE), 2019. doi:10.1109/bibe.2019.000-9.\\\\
+        \label{bib:2}
 
         [3] L. Tharmalingam, “Sleep Health and Lifestyle Dataset,” Kaggle, 2021. [Online]. Available: https://www.kaggle.com/lahiripremarathne/sleep-health-and-lifestyle-dataset. [Accessed: 10-Jun-2021].\\
+        \label{bib:3}
 
     \end{thebibliography}
 
