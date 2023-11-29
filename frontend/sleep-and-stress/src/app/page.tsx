@@ -31,7 +31,9 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full flex flex-col p-12 gap-6">
+    <main className="w-full min-h-screen relative flex flex-col p-12 gap-6 bg-indigo-300">
+      <Image src="/curtain.svg" className="absolute left-0 top-0 max-h-full" width={200} height={1000} alt="left-curtain" />
+      <Image src="/curtain.svg" className="absolute right-0 top-0 max-h-full scale-x-[-1]" width={200} height={1000} alt="left-curtain" />
       <section className="flex justify-center">
         <div className="flex flex-col align-center items-center justify-center p-12 border-8 border-indigo-700 rounded-md gap-8 bg-indigo-400">
           <h1 className="font-serif font-extrabold text-3xl text-white">
@@ -116,7 +118,7 @@ export default function Home() {
             </ul>
           </section>
         ) : (
-          <section className="text-2xl font-bold text-red-600">
+          <section className="text-2xl font-bold text-blue-700">
             Please fill in the form above!
           </section>
         )}
