@@ -48,6 +48,8 @@ top=1.25in, left=1in]{geometry}
     \end{titlepage}
 }
 
+\setlength{\emergencystretch}{3em}
+
 % set up header
 \fancyhf{} % clear all header and footer fields
 \lhead{The Effects of Sleep} % left header
@@ -59,7 +61,8 @@ top=1.25in, left=1in]{geometry}
     
     \newpage
 
-    \twocolumn\section*{Introduction and Background}
+    \twocolumn
+    \section*{Introduction and Background}
     \noindent As a student, we constantly grapple with numerous stressors while striving for academic success. Deadlines, exams, and the intrinsic self-asserted pressure to excel, they all contribute to the challenges we face. These factors can have a negative impact on our quality of learning and thus hinder our progress toward acquiring a degree to ultimately enter the workforce. In contrast, sleep is an activity that we all partake in and seems relaxing. So we posed a question: does sleep have any connections to stress? And if so, how are they related? Our goal is to construct predictions regarding the effects that sleep quality and sleep duration can have on our stress levels. By analyzing our data, we will be able to determine the correlation between stress and those two sleep-related attributes. It’s worth noting that our data includes individuals of ages 27 to 59. Although the range does not fall within the typical college student age, our results can still provide valuable insights and promote awareness that can benefit us for years to come. \\
 
     \noindent In this machine learning project centered on the intersection of sleep health and stress, our primary objective is to examine the correlation between key attributes such as sleep duration and sleep quality, and their influence on stress levels. This analysis will help us better understand and predict the dynamics between stress and other factors. Thus, it will help identify the attributes that have the most significant impact on stress levels. As an integral part of the project, we will develop accurate models for stress prediction based on the highly correlated attributes in our dataset.
@@ -79,7 +82,7 @@ top=1.25in, left=1in]{geometry}
     
     \noindent Initially, we conducted essential data preprocessing to convert all categorical data into numerical values, enhancing their compatibility with prediction models. This involved applying label encoding to categorical attributes from the dataset like BMI and Gender. We opted for label encoding over one-hot encoding to both maintain consistency in the number of columns in our dataset and to enhance clarity in visualizing a pair plot and correlation matrix.\\
     
-    \noindent Following data preprocessing, we generated a pair plot matrix \ref{fig:pairplot} to investigate any potential linearly separable relationships between the attributes and Stress Level. The pair plot revealed notable linear associations, particularly between Sleep Quality and both Sleep Duration and Age in predicting Stress Level. Additionally, Sleep Duration and Gender also have somewhat of a linear relationship in predicting stress.\\
+    \noindent Following data preprocessing, we generated a pair plot matrix (\hyperref[fig:pairplot]{Figure~\ref*{fig:pairplot}}) to investigate any potential linearly separable relationships between the attributes and Stress Level. The pair plot revealed notable linear associations, particularly between Sleep Quality and both Sleep Duration and Age in predicting Stress Level. Additionally, Sleep Duration and Gender also have somewhat of a linear relationship in predicting stress.\\
     
     \begin{figure}[H]
         \centering
@@ -88,7 +91,7 @@ top=1.25in, left=1in]{geometry}
         \label{fig:pairplot}
     \end{figure}
 
-    \noindent Subsequently, a correlation matrix \ref{fig:correlation} was constructed to examine high correlations among attributes, with a special focus on their connection to Stress Level as the dependent variable in our models. The correlation matrix reinforced the findings from the pair plot, highlighting strong negative correlations of -0.9 between Sleep Quality and Stress Level, and -0.81 between Stress Level and Sleep Duration.
+    \noindent Subsequently, a correlation matrix (\hyperref[fig:correlation]{Figure~\ref*{fig:correlation}}) was constructed to examine high correlations among attributes, with a special focus on their connection to Stress Level as the dependent variable in our models. The correlation matrix reinforced the findings from the pair plot, highlighting strong negative correlations of -0.9 between Sleep Quality and Stress Level, and -0.81 between Stress Level and Sleep Duration.
     
     \begin{figure}[H]
         \centering
@@ -102,7 +105,7 @@ top=1.25in, left=1in]{geometry}
     \noindent We also performed some outlier detection on these important variables using box plot models. We found no significant outliers neither in the predictor variables nor in the dependent variable Stress Level. Although Stress Level could be a value from 1 to 10, the only outcome values available from this dataset were between 3 and 8.\\
     
     \section*{Proposed Methodology}
-    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots \ref{fig:pairplot}, certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data.\\
+    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots (\hyperref[fig:pairplot]{Figure~\ref*{fig:pairplot}}), certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data.\\
 
     \noindent Managing the numerous levels of our outcome variable, Stress Level, made it difficult to discern a clear distinction between our labels. To simplify the problem, we contemplated grouping levels (e.g. combining 3 and 4, 5 and 6, 7 and 8 to create three stress levels instead of six). However, we ultimately decided against grouping to avoid potential oversimplification and instead retained the original range of 3-8.\\
 
