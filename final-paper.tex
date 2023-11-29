@@ -59,7 +59,7 @@ top=1.25in, left=1in]{geometry}
     
     \newpage
 
-    \section*{Introduction and Background}
+    \twocolumn\section*{Introduction and Background}
     \noindent As a student, we constantly grapple with numerous stressors while striving for academic success. Deadlines, exams, and the intrinsic self-asserted pressure to excel, they all contribute to the challenges we face. These factors can have a negative impact on our quality of learning and thus hinder our progress toward acquiring a degree to ultimately enter the workforce. In contrast, sleep is an activity that we all partake in and seems relaxing. So we posed a question: does sleep have any connections to stress? And if so, how are they related? Our goal is to construct predictions regarding the effects that sleep quality and sleep duration can have on our stress levels. By analyzing our data, we will be able to determine the correlation between stress and those two sleep-related attributes. It’s worth noting that our data includes individuals of ages 27 to 59. Although the range does not fall within the typical college student age, our results can still provide valuable insights and promote awareness that can benefit us for years to come. \\
 
     \noindent In this machine learning project centered on the intersection of sleep health and stress, our primary objective is to examine the correlation between key attributes such as sleep duration and sleep quality, and their influence on stress levels. This analysis will help us better understand and predict the dynamics between stress and other factors. Thus, it will help identify the attributes that have the most significant impact on stress levels. As an integral part of the project, we will develop accurate models for stress prediction based on the highly correlated attributes in our dataset.
@@ -116,14 +116,14 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{lr-report.png}
+        \includegraphics[width=\columnwidth]{lr-report.png}
         \caption{MSE and R$^2$ Results for Linear Regression}
         \label{fig:class-report-lr}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.70\textwidth]{lr-scatterplot.png}
+        \includegraphics[width=\columnwidth]{lr-scatterplot.png}
         \caption{Scatterplot of Linear Regression}
         \label{fig:scatterplot-lr}
     \end{figure}
@@ -135,16 +135,18 @@ top=1.25in, left=1in]{geometry}
     
     \begin{figure}[H]
         \centering
-        \subfloat[\centering Training Report]{{\includegraphics[width=7.5cm]{mlr-class-report-train.png} }}
+        \subfloat[\centering Training Report]{{\includegraphics[width=\columnwidth]{mlr-class-report-train.png} }}
         \qquad
-        \subfloat[\centering Testing Report]{{\includegraphics[width=7.5cm]{mlr-class-report-test.png} }}
+        \subfloat[\centering Testing Report]{{\includegraphics[width=\columnwidth]{mlr-class-report-test.png} }}
         \caption{Classification Report of Multinomial Logistic Regression}
         \label{fig:class-report-mlr}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{mlr-confusion-matrix.png}
+        \subfloat[\centering Confusion Matrix for Training Data]{{\includegraphics[width=\columnwidth]{mlr-confusion-matrix-train.png} }}
+        \qquad
+        \subfloat[\centering Confusion Matrix for Testing Data]{{\includegraphics[width=\columnwidth]{mlr-confusion-matrix-test.png} }}
         \caption{Confusion Matrix of Multinomial Logistic Regression}
         \label{fig:confusion-matrix-mlr}
     \end{figure}
@@ -166,7 +168,9 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{nb-confusion-matrix.png}
+        \subfloat[\centering Confusion Matrix for Training Data]{{\includegraphics[width=\columnwidth]{nb-confusion-matrix-train.png} }}
+        \qquad
+        \subfloat[\centering Confusion Matrix for Testing Data]{{\includegraphics[width=\columnwidth]{nb-confusion-matrix-test.png} }}
         \caption{Confusion Matrix of Naive Bayes}
         \label{fig:confusion-matrix-nb}
     \end{figure}
@@ -179,19 +183,22 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \subfloat[\centering Training Report]{{\includegraphics[width=7.5cm]{svm-class-report-train.png} }}
+        \subfloat[\centering Training Report]{{\includegraphics[width=\columnwidth]{svm-class-report-train.png} }}
         \qquad
-        \subfloat[\centering Testing Report]{{\includegraphics[width=7.5cm]{svm-class-report-test.png} }}
+        \subfloat[\centering Testing Report]{{\includegraphics[width=\columnwidth]{svm-class-report-test.png} }}
         \caption{Classification Report of Linear Support Vector Machine}
-        \label{fig:example}
+        \label{fig:class-report-svm}
     \end{figure}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{svm-confusion-matrix.png}
+        \subfloat[\centering Confusion Matrix for Training Data]{{\includegraphics[width=\columnwidth]{svm-confusion-matrix-train.png} }}
+        \qquad
+        \subfloat[\centering Confusion Matrix for Testing Data]{{\includegraphics[width=\columnwidth]{svm-confusion-matrix-test.png} }}
         \caption{Confusion Matrix of Linear Support Vector Machine}
         \label{fig:confusion-matrix-svm}
     \end{figure}
+
 
     \noindent We utilized sklearn's SVC function to implement the Support Vector Machine (SVM) for our analysis. The SVM model employs a Radial Basis Function (RBF) kernel.\\
 
@@ -205,7 +212,7 @@ top=1.25in, left=1in]{geometry}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.75\textwidth]{frontend.png}
+        \includegraphics[width=\columnwidth]{frontend.png}
         \caption{Demo of Frontend}
         \label{fig:frontend}
     \end{figure}
@@ -215,11 +222,10 @@ top=1.25in, left=1in]{geometry}
     
     \noindent For the future of stress prediction with machine learning, it is recommended that more robust models, along with a larger training set (possibly from real data), are used for practicality and to get less ambiguous trends. Furthermore, creating and testing other types of models, such as Decision Trees or Multilayer Perceptrons (MLPs), may yield slightly more accurate predictions than the models developed in this project. Regardless of what the future might bring, we take pride in what we’ve accomplished over the span of 10 weeks, transitioning from a collection of ideas to creating predictive models with accuracies exceeding 80\%, and ultimately developing a fully functioning frontend to display their capabilities.
 
-    \newpage
     \begin{thebibliography}{9}
-        \bibitem{bib:1} M. M. Rahman, A. Mohaimenul Islam, J. Miah, S. Ahmad, and M. Mamun, “Sleepwell:stress level prediction through sleep data. are you stressed?,” 2023 IEEE World AI IoT Congress (AIIoT), 2023. doi:10.1109/aiiot58121.2023.10174306.\\\\
+        \bibitem{bib:1} M. M. Rahman, A. Mohaimenul Islam, J. Miah, S. Ahmad, and M. Mamun, “Sleepwell:stress level prediction through sleep data. are you stressed?,” 2023 IEEE World AI IoT Congress (AIIoT), 2023. doi:10.1109/aiiot58121.2023.10174306.\\
 
-        \bibitem{bib:2} S. Jayawickrama and S. Rupasingha, “Predicting stress levels using sleep data,” 2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE), 2019. doi:10.1109/bibe.2019.000-9.\\\\
+        \bibitem{bib:2} S. Jayawickrama and S. Rupasingha, “Predicting stress levels using sleep data,” 2019 IEEE 19th International Conference on Bioinformatics and Bioengineering (BIBE), 2019. doi:10.1109/bibe.2019.000-9.\\
 
         \bibitem{bib:3} L. Tharmalingam, “Sleep Health and Lifestyle Dataset,” Kaggle, 2021. [Online]. Available: https://www.kaggle.com/lahiripremarathne/sleep-health-and-lifestyle-dataset. [Accessed: 10-Jun-2021].\\
 
