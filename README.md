@@ -5,19 +5,21 @@
 The demo of our model is created using Next.js with React, leveraging Flask as the backend. You must run the server before launching the frontend.
 
 ### Backend
-The server file is a python file located in the frontend/server directory, and it is called server.py. Please make sure to install the packages listed in the imports at the top of the file before running the server.
+Ensure that you have Python3 installed, and it is the latest version. If not, you can install it [here](https://www.python.org/downloads/). The server file is a Python file located in the frontend/server directory, and it is called server.py. Please make sure to install the packages listed in the imports at the top of the file before running the server.
 
-To install Flask, use the following command:
+Install the following packages:
 
-`pip install Flask`
+`pip3 install scikit-learn`
 
-Define the application in the FLASK_APP environment variable:
+`pip3 install numpy`
 
-`export FLASK_APP=server.py`
+`pip3 install Flask-Cors`
+
+`pip3 install Flask`
 
 Start the Flask server:
 
-`flask run`
+`python3 server.py`
 
 The backend should be up and running now. You can proceed with starting the frontend.
 
