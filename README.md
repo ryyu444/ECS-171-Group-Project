@@ -69,6 +69,13 @@ The backend should hopefully be up and running now. You can now proceed to start
 ---
 
 ### Frontend
-First, open up a new terminal. This can be done in VSC by simply clicking the `+` with the terminal panel open or `ctrl+shift+` shortcut. We need two separate terminals as the backend is a separate process from the frontend. Since our website is made using Next.js and built with React.js, you will need to install Node.js version 18 or higher. Refer to this [link](https://nodejs.org/en/) for guidance on Node.js installation.
+First, open up a new terminal. This can be done in VSC by simply clicking the `+` with the terminal panel open. 
+-   We need two separate terminals as the backend is a separate process from the frontend. 
 
-After installing Node.js, navigate to the frontend/sleep-and-stress directory in the new terminal. To install the necessary node modules, enter `npm i` or `npm install` in the command line. The modules listed in the package-lock.json file will then be automatically installed. These modules are necessary for our frontend to function. To launch the website, ensure you are still in the same directory (frontend/sleep-and-stress) and enter `npm run dev` into the same terminal. You should soon see a provided link to a local host, which you should click, and, with the server running, you will be able to test out our app!
+Since our website is made using Next.js and built with React.js, you will need to install Node.js version 18 or higher. Refer to this [link](https://nodejs.org/en/) for guidance on Node.js installation.
+
+After installing Node.js, navigate to the frontend/sleep-and-stress directory in the new terminal. 
+
+To install the necessary node modules, enter `npm i` or `npm install` in the command line. The modules listed in the package-lock.json file will then be automatically installed. These modules are necessary for our frontend to function. 
+
+To launch the website, ensure you are still in the same directory (frontend/sleep-and-stress) and enter `npm run dev` into the same terminal. You should soon see a provided link to a local host, which you should click, and, with the server running, you will be able to test out our app!
