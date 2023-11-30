@@ -17,6 +17,7 @@ Ensure that you have latest version of Python3 installed. You can check the vers
     C:\Users\user\AppData\Local\Programs\Python\Python312\Scripts\
 ```
 - These lines should enable global usage of Python regardless of where you are in your file tree.
+- user should correspond to the current user for your PC.
 
 ---
 
@@ -27,12 +28,12 @@ To create a virtual environment, run the following command:
 ```py
     python -m venv name_of_venv
 ```
-- Please create the venv within the root of frontend/server and nowhere else.
+- Please create the venv within the root of frontend/server.
 - name_of_venv is up to you. For best practices, name it in relation to the use case for your project (i.e flaskVenv).
 
 To start up a virtual environment, run the following command:
 ```py
-    ./venv/Scripts/activate
+    ./name_of_venv/Scripts/activate
 ```
 - Your terminal should now have (name_of_venv) in front of your path. This indicates that you are working within the virtual environment.
 
