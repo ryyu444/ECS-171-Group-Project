@@ -4,12 +4,12 @@
 
 The demo of our model is created using Next.js with React, leveraging Flask as the backend. You must run the server before launching the frontend to ensure model predictions are displayed.
 
-### Backend
+## Backend
 The server file is a Python file located in the frontend/server directory, and it is called server.py. Please make sure to navigate to the folder in your terminal before following the instructions below to run the server.
 
 ---
 
-### Downloading Python
+## Downloading Python
 Ensure that you have latest version of Python3 installed. You can check the version in the terminal with `python --version`. If not, you can install it [here](https://www.python.org/downloads/). It should print out `Python 3.12.0` if done properly. If you run into the issue where the version is not updated for some reason, make sure to *add* to your `PATH` variable in your System Environmental Variables with the following:
 
 ```
@@ -21,7 +21,7 @@ Ensure that you have latest version of Python3 installed. You can check the vers
 
 ---
 
-### Setting up a Virtual Environment
+## Setting up a Virtual Environment
 The reason we need a virtual environment is to prevent global installations of Python packages/libraries that may have conflicting versions/dependencies when used across different projects. It provides a safe, contained space where modifications to dependencies in our existing project will have no effect on other Python related projects.
 
 To create a virtual environment, run the following command:
@@ -45,7 +45,7 @@ To exit a virtual environment, run the following command:
 
 ---
 
-### Installing Packages
+## Installing Packages
 First, make sure that your virtual environment is active. Follow the steps above to get your virtual environment working. Then, install the following packages with pip: 
 ```py
     pip install flask
@@ -58,7 +58,7 @@ First, make sure that your virtual environment is active. Follow the steps above
 
 ---
 
-### Starting the server
+## Starting the server
 Make sure your virtual environment is active prior to starting the server. To start the flask server, run the following command:
 ```py
     python server.py
@@ -68,7 +68,7 @@ The backend should hopefully be up and running now. You can now proceed to start
 
 ---
 
-### Frontend
+## Frontend
 First, open up a new terminal. This can be done in VSC by simply clicking the `+` with the terminal panel open. 
 -   We need two separate terminals as the backend is a separate process from the frontend. 
 
