@@ -16,6 +16,11 @@ top=1.25in, left=1in]{geometry}
 % adjusting figures
 \usepackage{float}
 
+\makeatletter
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+
 % set up page style & graphic path
 \pagestyle{fancy}
 \graphicspath{{./images/}}
@@ -105,7 +110,7 @@ top=1.25in, left=1in]{geometry}
     \noindent We also performed some outlier detection on these important variables using box plot models. We found no significant outliers neither in the predictor variables nor in the dependent variable Stress Level. Although Stress Level could be a value from 1 to 10, the only outcome values available from this dataset were between 3 and 8.\\
     
     \section*{Proposed Methodology}
-    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots (\hyperref[fig:pairplot]{Figure~\ref*{fig:pairplot}}), certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data.\\
+    \noindent Given our objective to predict stress levels across six categories (levels 3-8), we are dealing with a multi-class classification problem. Upon reviewing the pair plots (\hyperref[fig:pairplot]{Figure~\ref*{fig:pairplot}}), certain graphs, such as Sleep Quality vs Sleep Duration, Sleep Duration vs Gender, and Sleep Duration vs Age indicated optimal separability in the data. We did not perform data normalization since all the values of our inputs were of equal scale and with the models chosen, normalization was not necessary. Also, no standardization was necessary because all the data we used for our models were numerical and categorical. \\
 
     \noindent Managing the numerous levels of our outcome variable, Stress Level, made it difficult to discern a clear distinction between our labels. To simplify the problem, we contemplated grouping levels (e.g. combining 3 and 4, 5 and 6, 7 and 8 to create three stress levels instead of six). However, we ultimately decided against grouping to avoid potential oversimplification and instead retained the original range of 3-8.\\
 
@@ -221,7 +226,7 @@ top=1.25in, left=1in]{geometry}
     \end{figure}
 
     \section*{Conclusion and Discussion}
-    \noindent Using the "Sleep Health and Lifestyle Dataset" and four models (Linear Regression, Logistic Regression, Naive Bayes, and Support Vector Machine), we formed models predicting Stress Level. While Linear Regression fell short, Multinomial Logistic Regression, Naive Bayes, and SVM achieved over 80\% accuracy, particularly excelling at predicting levels 3, 6, 7, and 8. Notably, Multinomial Logistic Regression and SVM emerged as the best predictive models, aligning with prior research. In stark contrast, however, we found that Naive Bayes was the worst out of the three contenders in comparison to external studies that concluded with Naive Bayes having the best predictive capabilities amongst all of their models. This can be attributed to many factors (e.g. our way of categorization, training and testing, etc).\\
+    \noindent Using the “Sleep Health and Lifestyle Dataset” and four models (Linear Regression, Logistic Regression, Naive Bayes, and Support Vector Machine), we formed models predicting Stress Level. While Linear Regression fell short, Multinomial Logistic Regression, Naive Bayes, and SVM achieved over 80\% accuracy, particularly excelling at predicting levels 3, 6, 7, and 8. Notably, Multinomial Logistic Regression and SVM emerged as the best predictive models, aligning with prior research. It seems that Logistic Regression had a slightly better performance than NonLinear SVM. This could be due to the fact that Logistic Regression uses thresholds on the data in order to make a prediction unlike SVM, which extrapolates the data into another higher dimension to make predictions. This extrapolation could result in introducing error into the model, explaining why SVM performs a bit poorer than Logistic Regression. In stark contrast, however, we found that Naive Bayes was the worst out of the three contenders in comparison to external studies that concluded with Naive Bayes having the best predictive capabilities amongst all of their models. This can be attributed to many factors (e.g. our way of categorization, training and testing, etc).\\
     
     \noindent For the future of stress prediction with machine learning, it is recommended that more robust models, along with a larger training set (possibly from real data), are used for practicality and to get less ambiguous trends. Furthermore, creating and testing other types of models, such as Decision Trees or Multilayer Perceptrons (MLPs), may yield slightly more accurate predictions than the models developed in this project. Regardless of what the future might bring, we take pride in what we’ve accomplished over the span of 10 weeks, transitioning from a collection of ideas to creating predictive models with accuracies exceeding 80\%, and ultimately developing a fully functioning frontend to display their capabilities.
 
@@ -233,5 +238,32 @@ top=1.25in, left=1in]{geometry}
         \bibitem{bib:3} L. Tharmalingam, “Sleep Health and Lifestyle Dataset,” Kaggle, 2021. [Online]. Available: https://www.kaggle.com/lahiripremarathne/sleep-health-and-lifestyle-dataset. [Accessed: 10-Jun-2021].\\
 
     \end{thebibliography}
+
+    \begin{table*}[hbt!]
+        \centering
+            \begin{tabular}{l|c|c|c}
+                \hline \hline
+                \multicolumn{4}{c}{\textbf{Project Roadmap}} \\ % resizes n columns into one
+                \hline \hline
+                \multicolumn{1}{c|}{\textbf{Task}} & \textbf{Start Date} & \textbf{End Date} & \textbf{Duration (days)} \\
+                \hline
+                Background/Literature Review & Oct. 16 & Oct. 22 & 7 \\
+                \hline
+                Exploratory Data Analysis & Oct. 23 & Oct. 29 & 7 \\
+                \hline
+                Developing prediction models & Oct. 30 & Nov. 8 & 10 \\
+                \hline
+                Evaluation of the model and testing performance & Nov. 9 & Nov. 14 & 9 \\
+                \hline
+                Developing front-end to display and run models & Nov. 15 & Nov. 27 & 12 \\
+                \hline
+                Writing Report & Nov. 9 & Dec. 6 & 34 \\
+                \hline
+                Presentation Practice & Dec. 2 & Dec. 5 & 3 \\
+                \hline \hline
+            \end{tabular}
+            \caption{Tasks, Start and End Dates, and Duration}
+        \label{tab:timeline}
+    \end{table*}
 
 \end{document}
